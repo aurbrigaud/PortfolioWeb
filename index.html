@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelien.Brigaud.Design</title>
+    <link rel="stylesheet" href="Scripts/Stylesheet.css" />
+    <link rel="icon" type="image/png" href="./Images/FavIcon-AurelienBrigaud.jpg" />
+    <script id="myP5" src="/Scripts/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script id="OrbP5" src="Scripts/OrbP5.js"></script>
+    <script id="myScript" src="/Scripts/Sketch_IMG.js"></script>
+
+
+    <script src="Scripts/translate.js"></script>
+    <script src="Scripts/index.js" ></script>
+
+    <script>
+
+        function AutomaScroll(cible) {
+            document.querySelector(cible).scrollIntoView({ behavior: 'smooth' });
+        }
+    /*
+                    Solution sans jQuery.
+                    Ne fonctionne pas correctement sur Safari.
+                    Pour compatibilité, voir le polyfill (Un Polyfill est un émulateur qui imite des fonctions non disponibles, pour tout navigateur) :
+                    http://iamdustan.com/smoothscroll/
+                    */
+    </script>
+</head>
+
+<body  id="page-top" onload="traduction('en','lng-tag')">
+
+    <div id="AurelienBrigaud">
+        <h1 id="copyrightInfo">
+            <div>A<span>u</span>r<span>é</span>lie<span>n</span><br>B<span>ri</span>g<span>a</span>u<span>d</span></h1>
+
+
+
+    </div>
+    <div class="translator"> 
+        <h6 id="enTranslator">EN</h6>
+        <h6 id="frTranslator">FR</h6>
+    </div>
+    <div id="absolute-container">
+        <img id="imgCentral" class="fit-picture" src="" onerror="this.style.display='none'">
+
+    </div>
+
+    <div class="mainContainer">
+        <div id="projects">
+
+            <div id="projectOne" class="clickable-project">
+                <div class="lineOne">
+                    <h2 lng-tag="graphismeProgramme">Graphisme programmé
+                    </h2>
+                    <h5>2022</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="memoire">Mémoire de recherche</h3>
+                    <h3 lng-tag="edition">Édition</h3>
+                </div>
+            </div>
+
+            <div id="projectTwo" class="clickable-project">
+                <div class="lineOne">
+                    <h2 >La Clef</h2>
+                    <h5>2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="identiteVisuelle">Identité visuelle</h3>
+                    <h3 lng-tag="affiches">Affiches</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>Groupe Full Ace</h2>
+                    <h5>2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="designInterface">Design d'interface</h3>
+                    <h3 lng-tag="directionArtistique">Direction Artistique</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2 lng-tag="etToutes">Et toutes les nuits seront des incendies</h2>
+                    <h5>2020</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="directionArtistique">Direction&nbspArtistique</h3>
+                    <h3 lng-tag="illustration">Illustration</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>Nakagin Tower</h2>
+                    <h5>2020</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="identiteVisuelle">Identité&nbspvisuelle</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2 lng-tag="atlasLacunaire">Atlas Lacunaire</h2>
+                    <h5>2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="edition">Édition</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>Paris Bordeaux 593km 9H36</h2>
+                    <h5>2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="edition">Édition</h3>
+                    <h3 lng-tag="typographie">Typographie</h3>
+                    <h3 lng-tag="directionArtistique" >Direction&nbspartistique</h3>
+                </div>
+            </div>
+
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>Maison Mana'o</h2>
+                    <h5>2021 </h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="direction">Direction&nbspartistique</h3>
+                    <h3 lng-tag="identiteVisuelle">Identité visuelle</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>BackTo !</h2>
+                    <h5>2020</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="directionArtistique">Direction&nbspartistique</h3>
+                    <h3 lng-tag="identiteVisuelle">Identité visuelle</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2 lng-tag="aLaRecherche">À la Recherche</h2>
+                    <h5>2019</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="ia">Intelligence artificielle</h3>
+                    <h3 lng-tag="edition">Édition</h3>
+                    <h3 lng-tag="webDev">Développement web</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>Capharnäum Motion Design</h2>
+                    <h5>2020-2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3>Motion Design</h3>
+                    <h3 lng-tag="designInterface">Design d'interface</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2>Capharnäum Illustration</h2>
+                    <h5>2019-2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3>Illustration</h3>
+                </div>
+            </div>
+
+            <div class="clickable-project">
+                <div class="lineOne">
+                    <h2 lng-tag="capharnaumPhotographie">Capharnäum Photographie</h2>
+                    <h5>2016-2021</h5>
+                </div>
+                <div class="lineTwo">
+                    <h3 lng-tag="photographie">photographie</h3>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="container-R">
+                <h6 class="contact" lng-tag="contact">
+                    <a href="mailto:a.brigaud25@gmail.com" target="_blank">Contact</a>
+                </h6>
+            <div id="legende" id="legendeEN">
+                <h4 id="legendText">
+                    Curieux créatif, né à&nbspMontpellier (France) en&nbsp;1996, vivant aujourd'hui&nbspà&nbspParis.
+                    Étudie
+                    le design graphique et la direction artistique au Campus Fonderie &nbsp;de &nbsp;l'image. Chercheur
+                    de
+                    solutions et de systèmes graphiques. Enthousiasmé par le&nbsp;creative&nbsp;coding
+                    et&nbsple&nbspfutur.
+                    Amateur d'expériences et &nbsp;de&nbsp;travaux&nbsp;collaboratifs.
+                </h4>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    var bibliotheque = [
+        {
+            // GRAPHISME PROGRAMME
+            listeImages: [
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme1.jpg',
+                    alt: 'Logo du bar BackTo à Bordeaux',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme2.jpg',
+                    alt: 'Stickers de BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme3.jpg',
+                    alt: 'Page instagram de BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme4.jpg',
+                    alt: 'Composition avec set de table et goodies pour BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme5.jpg',
+                    alt: 'Mug BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme6.jpg',
+                    alt: 'Menu BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme7.jpg',
+                    alt: 'Sac à emporter BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme8.jpg',
+                    alt: 'T-shirt BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme9.jpg',
+                    alt: 'Photo du restaurant BackTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme10.jpg',
+                    alt: 'Carte de fidélité BactTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme11.jpg',
+                    alt: 'Carte de fidélité BactTo',
+                },
+                {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme12.jpg',
+                    alt: 'Carte de fidélité BactTo',
+                }, {
+                    src: './Images/GraphismeProgramme/GraphismeProgramme13.jpg',
+                    alt: 'Carte de fidélité BactTo',
+                },
+            ],
+            legendeEN:'Programmed graphics: the program as nature, tool, critic is a research paper questioning the potentialities offered by programming as a graphic design tool, starting from Tim Rodenbrökers Programming Poster project. This reflection is accompanied and supported by projects, thoughts, and examples of actors from the graphic and computer scene in an attempt to understand the links between the two practices.',
+            legende: 'Graphisme Programm&eacute; : le programme comme nature, outil, critique est un m&eacute;moire de recherche interrogeant les potentialités offertes par la programmation comme outil de design graphique, en partant du projet Programming Poster de Tim Rodenbröker. <br>Cette réflexion s&rsquo;accompagne et s&rsquo;étaye de projets, pensées, s&rsquo;illustre d&rsquo;acteurs et d&rsquo;actrices de la scène graphique et informatique pour essayer de comprendre les liens qu&rsquo;entretiennent les&nbsp;deux&nbsp;pratiques.'
+        },
+       // LA CLEF
+        {
+            listeImages: [
+                {
+                    src: './Images/LaClef/LaClef1.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                }, {
+                    src: './Images/LaClef/LaClef2.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef3.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef4.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef5.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef6.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef7.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef8.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef9.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef10.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+                {
+                    src: './Images/LaClef/LaClef11.jpg',
+                    alt: 'Motion design pour un festival de musique utopique',
+                },
+            ],
+            legende: 'La Clef est une identit&eacute; visuelle centr&eacute;e autour de la production d&apos;un caract&egrave;re custom, le kinotype. Ce caract&egrave;re a &eacute;t&eacute; imagin&eacute; en hommages aux typographies monospaces pr&eacute;sente dans les documents techniques de cin&eacute;ma, int&eacute;grant certaines particularit&eacute;s tels que le &quot;f&quot; en forme de clef et l&apos;esperluette en forme de serrure. Cette identit&eacute; comprend une affiche de r&eacute;-ouverture (post-Covid19), une affiche programme pour le mois et des tickets de s&eacute;ances.'
+        },
+        // Groupe FULL ACE
+        {
+            listeImages: [
+
+                {
+                    src: './Images/GroupeFullAce/GroupeFullAce1.gif',
+                    alt: 'Packshot monochrome bleu Forevents',
+                },
+                {
+                    src: './Images/GroupeFullAce/GroupeFullAce2.gif',
+                    alt: 'Photo pour la marque Sailing Together, coopération entre Forevents et Maxime Sorel',
+                },
+            ],
+            legende: 'Groupe Full Ace est un projet r&eacute;alis&eacute; au sein du studio bordelais Tonton Barbu, en collaboration avec Frederic Mazabraud. La direction artistique, le design de l&apos;interface et les interactions ont &eacute;t&eacute; pens&eacute;s pour mettre en avant un positionnement premium avec comme leitmotiv &quot;raconter l&apos;&eacute;quipe par l&apos;objet&quot;.'
+        },
+        {
+            listeImages: [
+            {
+                    src: './Images/Nuits/Nuits1.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/Nuits/Nuits2.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits3.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits4.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits5.gif',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits6.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits7.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits8.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+                {
+                    src: './Images/Nuits/Nuits9.jpg',
+                    alt: 'Packshot d un extrait du projet',
+                },
+            ],
+            legende: 'Roman graphique réalisé en vue de la préparation du diplôme à LISAA Bordeaux. L\'édition porte sur le thème de la dépression et de l\'ennui dans le quotidien. Le roman est ponctué de jeux, autour de la créativité, s\'insérant dans la narration. 98 pages / 150x230mm / Intérieur : Rives Design extra blanc 120g / Couverture : Rives Design 250g extra blanc non rainé&nbsp;couverture'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/Nakagin/Nakagin1.jpg',
+                    alt: 'Photo de l hôtel Nakagin Capsule Tower dans les années 80s',
+                },
+                {
+                    src: './Images/Nakagin/Nakagin2.jpg',
+                    alt: 'Logo Nakagin Capsule Tower',
+                },
+                {
+                    src: './Images/Nakagin/Nakagin3.jpg',
+                    alt: 'Traits de constructions du logo Nakagin Capsule Tower',
+                },
+                {
+                    src: './Images/Nakagin/Nakagin4.jpg',
+                    alt: 'Photo d un pass d accès au Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/Nakagin/Nakagin5.jpg',
+                    alt: 'Coque d Iphone Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/Nakagin/Nakagin6.jpg',
+                    alt: 'Sac de course Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/Nakagin/Nakagin7.jpg',
+                    alt: 'Kakémono Nakagin Capsule Tower'
+                },
+            ],
+            legende: 'Identité proposée pour un hôtel en passe d\'abandon à Tokyo. Inspirée par la verticalité du bâtiment dessiné par Kisho Kurokawa et par la forme particulière des chambres. L\'ensemble se décline sur plusieurs supports.'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire1.jpg',
+                    alt: 'Photo de l hôtel Nakagin Capsule Tower dans les années 80s',
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire2.jpg',
+                    alt: 'Logo Nakagin Capsule Tower',
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire3.jpg',
+                    alt: 'Traits de constructions du logo Nakagin Capsule Tower',
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire4.jpg',
+                    alt: 'Photo d un pass d accès au Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire5.jpg',
+                    alt: 'Coque d Iphone Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire6.jpg',
+                    alt: 'Sac de course Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire7.jpg',
+                    alt: 'Kakémono Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire8.jpg',
+                    alt: 'Kakémono Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire9.jpg',
+                    alt: 'Kakémono Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire10.jpg',
+                    alt: 'Kakémono Nakagin Capsule Tower'
+                },
+                {
+                    src: './Images/AtlasLacunaire/AtlasLacunaire11.jpg',
+                    alt: 'Kakémono Nakagin Capsule Tower'
+                },
+                
+            ],
+            legende: '&Eacute;dition interrogeant la r&eacute;partition des contributions sur les &nbsp;espaces g&eacute;ographiques au sein de la communaut&eacute;Wikip&eacute;dia&nbsp;francophone . Le contenu est structur&eacute; autour des sept continents, contenant onze fiches Wikipedia chacune. Chacune de ces fiches a &eacute;t&eacute; trouv&eacute; gr&acirc;ce &agrave; la fonction &quot;page al&eacute;atoire&quot; sur Wikip&eacute;dia. La mise en page a pour volont&eacute; de mettre en lumi&egrave;re les manquements et lacunes des connaissances selon qu&apos;on l&apos;endroit du globe concern&eacute;.'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/ParisBordeaux/Bordeaux1.jpg',
+                    alt: 'Photo de l%E2%80%99edition dans une voiture'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux2.jpg',
+                    alt: 'Couverture de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux3.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux4.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux5.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux6.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux7.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux8.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux9.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux10.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux11.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux12.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux13.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux14.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux15.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux16.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+                {
+                    src: './Images/ParisBordeaux/Bordeaux17.jpg',
+                    alt: 'Intérieur de Paris-Bordeaux'
+                },
+            ],
+            legende: 'Réalisation d\'une typographie résumant des instructions GPS en les retranscrivant en code. Déploiement de la logique sur le trajet Paris-Bordeaux dans une édition. Workshop réalisé au Campus Fonderie de l\'Image, sous le regard de Simon Renaud et Ariane Dubois. <br> Réalisé en collaboration avec Antoine Jarno et Romain Marc. 71 pages / 240x360mm / Intérieur : mat 90g / Couverture : offset 300g '
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/MaisonManaO/MaisonManao1.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao2.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao3.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao4.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao5.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao6.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao7.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao8.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+                {
+                    src: './Images/MaisonManaO/MaisonManao9.jpg',
+                    alt: 'Packshot de la couverture de "Toutes les nuits seront des incendies"',
+                },
+            ],
+            legende: 'Identit&eacute;&nbsp;con&ccedil;ue&nbsp;au sein du studio Tonton Barbu, pour une maison-&eacute;cole&nbsp;de massage et de bien-&ecirc;tre &agrave; Bordeaux.&nbsp;La direction artistique est d&eacute;termin&eacute;e par les influences naturalistes et v&eacute;g&eacute;tale des cr&eacute;ateurs de cette maison.'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/BackTo/BackTo1.jpg',
+                    alt: 'Logo du bar BackTo à Bordeaux',
+                },
+                {
+                    src: './Images/BackTo/BackTo2.jpg',
+                    alt: 'Stickers de BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo3.jpg',
+                    alt: 'Page instagram de BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo4.jpg',
+                    alt: 'Composition avec set de table et goodies pour BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo5.jpg',
+                    alt: 'Mug BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo6.jpg',
+                    alt: 'Menu BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo7.jpg',
+                    alt: 'Sac à emporter BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo8.jpg',
+                    alt: 'T-shirt BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo9.jpg',
+                    alt: 'Photo du restaurant BackTo',
+                },
+                {
+                    src: './Images/BackTo/BackTo10.jpg',
+                    alt: 'Carte de fidélité BactTo',
+                },
+            ],
+            legende: 'Bar à ambiance retro 80\'s et 90\'s situé à Bordeaux. Identité joueuse, inspirée de la culture du scrapbooking et de l\'ignorant&nbsp;art.'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/KarmaCoffee/KarmaCoffee1.jpg',
+                    alt: 'Logo Karma Coffee',
+                },
+                {
+                    src: './Images/KarmaCoffee/KarmaCoffee2.jpg',
+                    alt: 'Ensemble de supports imprimés pour Karma Coffee',
+                },
+                {
+                    src: './Images/KarmaCoffee/KarmaCoffee3.jpg',
+                    alt: 'Carte de visite et mug pour Karma Coffee',
+                },
+                {
+                    src: './Images/KarmaCoffee/KarmaCoffee4.jpg',
+                    alt: 'Photographie du vélo ambulant Karma Coffee',
+                },
+                {
+                    src: './Images/KarmaCoffee/KarmaCoffee5.jpg',
+                    alt: 'Photographie du café ambulant dans un parc bordelais',
+                },
+                {
+                    src: './Images/KarmaCoffee/KarmaCoffee6.jpg',
+                    alt: 'Photographie du café ambulant dans un parc bordelais',
+                },
+            ],
+            legende: 'Café ambulant d\'inspirations orientale et européenne. Réalisé en collaboration avec Romain Marc, photographie de Romain&nbsp;Escandell.'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/MotionDesign/MotionDesign1.gif',
+                    type: 'video/mp4',
+                    alt: 'Animations images par images autour de la question de répétition et du "oddly satisfying" ',
+                },
+                {
+                    src: './Images/MotionDesign/MotionDesign2.gif',
+                    type: 'video/mp4',
+                    alt: 'Animations images par images autour de la question de répétition et du "oddly unsatisfying" ',
+                },
+                {
+                    src: './Images/MotionDesign/MotionDesign3.gif',
+                    type: 'video/mp4',
+                    alt: 'Animations images par images autour de la question de répétition et du "oddly unsatisfying" ',
+                },
+                {
+                    src: './Images/MotionDesign/MotionDesign4.gif',
+                    type: 'video/mp4',
+                    alt: 'Animations images par images autour de la question de répétition et du "oddly unsatisfying" ',
+                },
+            ],
+            legende: 'Capharnäum(nm): lieu plein d\'objets entassés sans ordre. &Eacute;chantillon et recherches d&apos;animations, pour un site web, un festival de musique et deux animations autour de la notion d&apos;oddly satisfying/unsatisfying'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/Graphisme/Graphisme1.jpg',
+                    alt: 'T-shirt réalisé dans le cadre d un challenge creatif lancé par WWWESH.studio',
+                },
+                {
+                    src: './Images/Graphisme/Graphisme2.jpg',
+                    alt: 'T-shirt réalisé dans le cadre d un challenge creatif lancé par WWWESH.studio',
+                },
+                {
+                    src: './Images/Graphisme/Graphisme3.jpg',
+                    alt: 'Stickers réalisés dans le cadre d un challenge creatif lancé par WWWESH.studio',
+                },
+                {
+                    src: './Images/Graphisme/Graphisme4.jpg',
+                    alt: 'Carton d invitation',
+                },
+                {
+                    src: './Images/Graphisme/Graphisme5.jpg',
+                    alt: 'Illustration réalisé dans le cadre de l inktober 2020',
+                },
+                {
+                    src: './Images/Graphisme/Graphisme6.jpg',
+                    alt: 'Illustration réalisé dans le cadre de l inktober 2020',
+                },
+                {
+                    src: './Images/Graphisme/Graphisme7.jpg',
+                    alt: 'Illustration réalisé dans le cadre de l inktober 2020',
+                },
+            ],
+            legende: 'Capharnäum(nm): lieu plein d\'objets entassés sans ordre. Échantillon de plusieurs illustrations et réalisations graphiques disparates. Notamment pour l\'Inktober 2020 et le WWWESH challenge.'
+        },
+        {
+            listeImages: [
+                {
+                    src: './Images/Photos/Photos1.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos2.jpg',
+                    alt: 'Ceci est l\'image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos3.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos4.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos5.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos6.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos7.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos8.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos9.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos10.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos11.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+                {
+                    src: './Images/Photos/Photos12.jpg',
+                    alt: 'Ceci est l\image 1 du projet 6',
+                },
+            ],
+            legende: 'Capharnäum(nm) : lieu plein d\'objets entassés sans ordre. Échantillon de photographies prises entre 2018 et aujourd\'hui'
+        },
+    ];
+
+
+    console.log('data : ', bibliotheque);
+
+    var indexPro = 1;
+    var numberOfClickProject = 0;
+    var numberOfClickCarousel = 0;
+    var imgInitial = document.getElementById('imgCentral');
+    var myScript = document.getElementById('defaultCanvas0');
+    var myP5 = document.getElementById('myP5');
+
+    console.log(myScript)
+
+    var isScriptLaunch = {
+        launch: true
+    };
+
+    //// function 1
+    const projectDOMs = document.querySelectorAll(".clickable-project");
+
+    projectDOMs.forEach((projectDOM, index) => projectDOM.addEventListener('click', () => changeContent(index)));
+
+    function changeContent(indexProject) {
+        document.getElementById('defaultCanvas0').style.display = "none";
+        document.getElementById('imgCentral').style.display = "initial";
+
+
+        numberOfClickCarousel = 0;
+        numberOfClickProject++;
+        indexPro = indexProject;
+        const imgDOM = document.getElementById('imgCentral');
+        const lgdDOM = document.getElementById('legendText');
+        imgDOM.src = bibliotheque[indexProject].listeImages[0].src;
+        imgDOM.alt = bibliotheque[indexProject].listeImages[0].alt;
+        lgdDOM.innerHTML = bibliotheque[indexProject].legende;
+
+        // Si on est pas à l'init
+        if (numberOfClickProject > 0) {
+            var divContainerCopyright = document.getElementById('AurelienBrigaud');
+            divContainerCopyright.style.alignItems = 'initial';
+            divContainerCopyright.style.fontSize = '1vw';
+            divContainerCopyright.style.height = 'fit-content';
+
+
+        }
+
+        const copyrightInfoDom = document.getElementById('copyrightInfo');
+        copyrightInfo.onclick = () => {
+            isScriptLaunch = true;
+            const imgDOM = document.getElementById('imgCentral');
+            // element dom
+            console.dir(imgDOM);
+            console.dir(imgInitial.src);
+            //  divContainerCopyright.style.alignItems = 'center';
+            document.getElementById('defaultCanvas0').style.display = "initial";
+            document.getElementById('imgCentral').style.display = "none";
+
+            //set elemetdom innerHTML
+            lgdDOM.innerHTML = 'Curieux créatif, né à&nbspMontpellier (France) en&nbsp;1996, vivant aujourd\'hui&nbspà&nbspParis. Étudie le design graphique et la direction artistique au Campus Fonderie &nbsp;de &nbsp;l\'image. Chercheur de solutions et de systèmes graphiques. Enthousiasmé par le&nbsp;creative&nbsp;coding et&nbsple&nbspfutur. Amateur d\'expériences et &nbsp;de&nbsp;travaux&nbsp;collaboratifs.';
+            divContainerCopyright.style.alignItems = 'center';
+            divContainerCopyright.style.fontSize = '1vw';
+            divContainerCopyright.style.height = '100vh';
+
+            
+
+
+        }
+    }
+
+    // function 2
+    const carousel = document.getElementById('imgCentral');
+    carousel.onclick = () => {
+        numberOfClickCarousel++;
+        if (bibliotheque[indexPro].listeImages.length > numberOfClickCarousel) {
+            carousel.src = bibliotheque[indexPro].listeImages[numberOfClickCarousel].src;
+            carousel.alt = bibliotheque[indexPro].listeImages[numberOfClickCarousel].alt;
+        } else if (bibliotheque[indexPro].listeImages.length === numberOfClickCarousel) {
+            carousel.src = bibliotheque[indexPro].listeImages[0].src;
+            carousel.alt = bibliotheque[indexPro].listeImages[0].alt;
+            numberOfClickCarousel = 0;
+        }
+    }
+
+    // const generatedParent = document.createElement("div");
+    // generatedParent.style.display = 'flex';
+    // generatedParent.style.width = '100%';
+    // generatedParent.style.height = '100vh';
+    // generatedParent.style.justifyContent = 'center';
+    // generatedParent.style.alignItems = 'center';
+
+
+    setTimeout(() => {
+        const divAurelien = document.getElementById('AurelienBrigaud');
+        const imgCanvasGenerated = window.document.querySelector('#defaultCanvas0');
+        imgCanvasGenerated.style.position = 'absolute';
+        imgCanvasGenerated.style.left = '';
+        imgCanvasGenerated.style.top = '';
+        imgCanvasGenerated.style.zIndex = '1';
+        imgCanvasGenerated.style.display = 'flex'
+        divAurelien.appendChild(imgCanvasGenerated);
+    }, 20000);
+
+
+
+</script>
+
+</html>
