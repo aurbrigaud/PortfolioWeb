@@ -1,88 +1,72 @@
-var orb = [];
-var c = ["#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56", "#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56"];
-var col;
-var num;
-
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-    for (var i = 0; i < 200; i++) {
-        orb[i] = new SoftOrb(c[i]);
-    }
-    // color1 = random(255);
-    // color2 = random(255);
-    // color3 = random(255);
-
-
-}
-
-function draw() {
-   // background(255);
-    // let color= (random(20),random(0), random(255) );
-  //  fill(255, 0, 0);
-   // rectMode(CENTER);
-   // rect(width/2, height/2, mouseX, 200);
+//sketch 1
+var s = function( p ) { // p could be any variable name
+    //déclaratop,s
+    p.orb = [];
+    p.c = ["#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56"];
+    p.col;
+    p.num;
+    p.MAX_ORBS = 200;
+    p.ORB_DISPLAY_TIME = 200;
+    p.lastTimeMouseMoved = 0;
     
-    for (var i = 0; i < orb.length; i++) {
+    p.setup = function() {
+      p.createCanvas(p.windowWidth, p.windowHeight);
+    };
+  
+    p.draw = function() {
+        p.clear();
+          
+        p.if = (p.pmouseX !== p.mouseX && p.pmouseY !== p.mouseY){
+          p.lastTimeMouseMoved = p.millis();
+          p.orb = [];
+        }
+        
+        
+        p.diff = Math.max(0, millis() - p.lastTimeMouseMoved - 2000);
+        p.for = ( p.i = 0; p.i < Math.round(p.diff / p.ORB_DISPLAY_TIME); p.i++) {
+          p.if (p.i === p.MAX_ORBS)
+            p.break;
+          
+          p.if (!p.orb[p.i])
+            p.orb[p.i] = new p.SoftOrb(p.c[p.i % p.c.length]);
+            p.orb[p.i].display();
+        }
+    };
 
-        // orb[i].colour(); // <-----???!
-        // orb[i].edges();
-        // fill(value);
-        //fill(255, 0, 0)
-        orb[i].display();
-        // orb[i].move();
+
+p.function = function SoftOrb(col) {
+    p.this.loc = createVector(random(width), random(height));
+    p.this.vel = createVector(0, 0);
+    p.this.col = col;
+    p.this.display = function () {
+        p.fill(col);
+        p.noStroke();
+        p.ellipse(this.loc.x, this.loc.y, 50, 50);
     }
-
-    // if(mouseX===this.loc.x){
-    //     fill(0);
-    //         }
-            
-
+    p.this.colour = function () {
+    }
 }
-
-// function mousePressed() {
-
-//     if (value === 0) {
-//         value = 255;
-//       } else {
-//         value = 0;
-//       }
-
-// }
-
-
-
-// function mousePressed() {
-
-//     if (value === 0) {
-//         // value = 255;
-//     } else {
-//         // value = 0;
-
-//     }
-
-// }
-
-function SoftOrb(col) {
-    this.loc = createVector(random(width), random(height));
-    this.vel = createVector(0, 0);
+  };
+  
+  var myp5 = new p5(s, 'c1');
+  
+  // Sketch Two
+  var t = function( d ) { 
+    d.setup = function() {
+      d.createCanvas(400, 100);
+      x = 50;
+      y = 75;
+    };
+  
+    d.draw = function() {
+      d.background(100);
+      d.fill(100, 100, 200);
+      d.circle(x, y, 20)
+    };
     
-
-
-    this.col = col;
-    this.display = function () {
-        fill(col);
-        noStroke();
-
-
-        ellipse(this.loc.x, this.loc.y, 50, 50);
+    d.mousePressed = function() {
+      x = d.mouseX
+      y = d.mouseY
     }
-
-    this.colour = function () {
-
-
-        //  fill(color1, color2, color3);
-        //fill(255, 0, 0);
-        //fill(col);
-
-    }
-}
+  };
+  var myp52 = new p5(t, 'c2');
