@@ -1,4 +1,21 @@
 {
     "contact" : "Contact",
-    "graphismeProgramme" : "Graphisme Programmé"
+    "graphismeProgramme" : "Graphisme Programmé",
+    "legendText":"Curieux créatif, né à à&nbspMontpellier (France), en&nbsp;1996, vivant aujourd'hui entre Bordeaux, Montpellier et Paris. Diplômé d'un matère en Direction Créative au Campus Fonderie de l'Image (Paris). ",
+    "memoire":"Mémoire",
+    "edition":"Édition",
+    "identiteVisuelle":"Identité visuelle",
+    "affiches":"Affiches",
+    "designInterface":"Design d'interface",
+    "etToutes":"Et Toutes Les Nuits Seront Des incendies",
+    "directionArtistique":"Direction Artistique",
+    "illustration":"Illustration",
+    "atlasLacunaire":"Atlas Lacunaire",
+    "typographie":"Typographie",
+    "aLaRecherche":"À la Recherche",
+    "ia":"Intelligence Artificielle",
+    "webDev":"Devellopement web",
+    "capharnaumPhotographie":"Capharnäum photographique",
+    "photographie":"Photographie"
     }
+    

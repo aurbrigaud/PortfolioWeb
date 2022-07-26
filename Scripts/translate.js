@@ -10,18 +10,18 @@ function Translate() {
 		var xrhFile = new XMLHttpRequest();
 		//load content data 
 		xrhFile.open("GET", "scripts/lng/"+this.lng+".json", false);
-        print("hello1");
-        print("lng/"+this.lng+".json");
-        print(xrhFile);
+        // print("hello1");
+        // print("lng/"+this.lng+".json");
+        // print(xrhFile);
 		xrhFile.onreadystatechange = function ()
 		{
 			if(xrhFile.readyState === 4)
 			{
-                print(xrhFile.status)
+                // print(xrhFile.status)
 
 				if(xrhFile.status === 200 || xrhFile.status == 0)
 				{
-                    print("hello3")
+                    // print("hello3")
 
 					var LngObject = JSON.parse(xrhFile.responseText);
 					var allDom = document.getElementsByTagName("*");

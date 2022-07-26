@@ -47,6 +47,9 @@
     </div>
     <div id="absolute-container">
         <img id="imgCentral" class="fit-picture" src="" onerror="this.style.display='none'">
+
+        <div id="c2"></div>
+
        
     </div>
 
@@ -137,7 +140,7 @@
                     <h5>2021 </h5>
                 </div>
                 <div class="lineTwo">
-                    <h3 lng-tag="direction">Direction&nbspartistique</h3>
+                    <h3 lng-tag="directionArtistique">Direction&nbspartistique</h3>
                     <h3 lng-tag="identiteVisuelle">Identité visuelle</h3>
                 </div>
             </div>
@@ -787,12 +790,16 @@
     var numberOfClickProject = 0;
     var numberOfClickCarousel = 0;
     var imgInitial = document.getElementById('imgCentral');
-    var myScript = document.getElementById('defaultCanvas0');
+    var myScript = document.getElementById('defaultCanvas1');
+    var OrbP5 = document.getElementById('defaultCanvas0');
+
+
     var myP5 = document.getElementById('myP5');
 
     // var OrbP5 = document.getElementById('')
 
-    console.log(myScript)
+    console.log(myScript);
+    console.log(OrbP5);
 
     var isScriptLaunch = {
         launch: true
@@ -804,8 +811,10 @@
     projectDOMs.forEach((projectDOM, index) => projectDOM.addEventListener('click', () => changeContent(index)));
 
     function changeContent(indexProject) {
-        document.getElementById('defaultCanvas0').style.display = "none";
+        document.getElementById('defaultCanvas1').style.display = "none";
         document.getElementById('imgCentral').style.display = "initial";
+        document.getElementById('defaultCanvas0').style.pointerEvents = "none";
+
 
 
         numberOfClickCarousel = 0;
@@ -852,7 +861,7 @@
             console.dir(imgDOM);
             console.dir(imgInitial.src);
             //  divContainerCopyright.style.alignItems = 'center';
-            document.getElementById('defaultCanvas0').style.display = "initial";
+            document.getElementById('defaultCanvas1').style.display = "initial";
             document.getElementById('imgCentral').style.display = "none";
 
             //set elemetdom innerHTML
@@ -892,7 +901,7 @@
 
     setTimeout(() => {
         const divAurelien = document.getElementById('AurelienBrigaud');
-        const imgCanvasGenerated = window.document.querySelector('#defaultCanvas0');
+        const imgCanvasGenerated = window.document.querySelector('#defaultCanvas1');
         imgCanvasGenerated.style.position = 'absolute';
         imgCanvasGenerated.style.left = '';
         imgCanvasGenerated.style.top = '';

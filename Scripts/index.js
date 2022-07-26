@@ -7,7 +7,7 @@ function traduction(lng, tagAttr){
   // print(tagAttr);
 
   var translate = new Translate();
-  print(translate);
+  // print(translate);
 
   translate.init(tagAttr, lng);
   translate.process();
