@@ -7,7 +7,8 @@
     <title>Aurelien.Brigaud.Design</title>
     <link rel="stylesheet" href="Scripts/Stylesheet.css" />
     <link rel="icon" type="image/png" href="./Images/FavIcon-AurelienBrigaud.jpg" />
-    <script id="myP5" src="/Scripts/p5.js"></script>
+    <script id="myP5" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <!-- <script  src="/Scripts/p5.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
@@ -170,7 +171,7 @@
 
             <div class="clickable-project">
                 <div class="lineOne">
-                    <h2>Capharnäum Motion Design</h2>
+                    <h2 lng-tag="capharnaumMotion">Capharnäum Motion Design</h2>
                     <h5>2020-2021</h5>
                 </div>
                 <div class="lineTwo">
@@ -181,7 +182,7 @@
 
             <div class="clickable-project">
                 <div class="lineOne">
-                    <h2>Capharnäum Illustration</h2>
+                    <h2 lng-tag="capharnaumIllustration" >Capharnäum Illustration</h2>
                     <h5>2019-2021</h5>
                 </div>
                 <div class="lineTwo">
@@ -839,7 +840,9 @@
         // });
 
 
-
+            if (document.getElementById('imgCentral').style.display = "initial"){
+                document.getElementById('defaultCanvas1').style.pointerEvents = "none";
+            }
 
         console.log("je suis dans le script originel")
 
@@ -901,7 +904,7 @@
 
     setTimeout(() => {
         const divAurelien = document.getElementById('AurelienBrigaud');
-        const imgCanvasGenerated = window.document.querySelector('#defaultCanvas1');
+        const imgCanvasGenerated = window.document.querySelector('defaultCanvas1');
         imgCanvasGenerated.style.position = 'absolute';
         imgCanvasGenerated.style.left = '';
         imgCanvasGenerated.style.top = '';

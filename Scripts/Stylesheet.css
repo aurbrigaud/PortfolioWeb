@@ -366,12 +366,15 @@ height: 70%;
 
 @media only screen and (orientation:portrait) {
 
-  body {
-    height: 100vw;
+  html {
+    height: 100vh;
+    width: 100vh;
     transform: rotate(90deg);
-    background-color: aqua;
+    /* background-color: aqua; */
   }
-
-
+  body{
+    height: 100vh;
+    overflow: hidden;
+  }
 
 }
