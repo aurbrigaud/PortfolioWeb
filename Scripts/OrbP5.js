@@ -1,4 +1,4 @@
-const MAX_ORBS = 200;
+const MAX_ORBS = 2000;
 const ORB_DISPLAY_TIME = 200;
 const COLORS = ["#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56"];
 // Sketch Two
@@ -44,7 +44,7 @@ const COLORS = ["#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56"];
         this.display = function () {
             d.fill(col);
             d.noStroke();
-            d.ellipse(this.loc.x, this.loc.y, d.windowWidth/30,d.windowWidth/30);
+            d.ellipse(this.loc.x, this.loc.y, d.windowWidth/50,d.windowWidth/50);
         }
         this.colour = function () {
         }
