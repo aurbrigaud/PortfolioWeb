@@ -872,7 +872,7 @@
             lgdDOM.innerHTML = 'Curieux créatif, né à&nbspMontpellier (France) en&nbsp;1996, vivant aujourd\'hui&nbspà&nbspParis. Étudie le design graphique et la direction artistique au Campus Fonderie &nbsp;de &nbsp;l\'image. Chercheur de solutions et de systèmes graphiques. Enthousiasmé par le&nbsp;creative&nbsp;coding et&nbsple&nbspfutur. Amateur d\'expériences et &nbsp;de&nbsp;travaux&nbsp;collaboratifs.';
             divContainerCopyright.style.alignItems = 'center';
             divContainerCopyright.style.fontSize = '1vw';
-            divContainerCopyright.style.height = '100vh';
+            divContainerCopyright.style.height = '100%';
 
             
 
@@ -910,7 +910,8 @@
         imgCanvasGenerated.style.left = '';
         imgCanvasGenerated.style.top = '';
         imgCanvasGenerated.style.zIndex = '1';
-        imgCanvasGenerated.style.display = 'flex'
+        imgCanvasGenerated.style.display = 'flex';
+        imgCanvasGenerated.style.flexDirection = 'row';
         divAurelien.appendChild(imgCanvasGenerated);
     }, 20000);
 

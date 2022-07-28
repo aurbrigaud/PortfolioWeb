@@ -52,6 +52,7 @@ var s = function (p) { // p could be any variable name
 
 
   p.setup = function () {
+
     cnv = p.createCanvas(img.width, img.height);
 
     let newCanvasX = (p.windowWidth - img.width) / 2;
@@ -63,6 +64,7 @@ var s = function (p) { // p could be any variable name
   };
 
   p.draw = function () {
+
     p.background(255);
     p.fill(0);
     p.noStroke();
