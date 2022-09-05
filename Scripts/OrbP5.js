@@ -21,7 +21,7 @@ const COLORS = ["#FE2C19", "#52C5DB", "#6A25FF", "#FFAED8", "#CDCA56"];
           }
 
 
-          let diff = Math.max(0, d.millis() - d.lastTimeMouseMoved - 2000);
+          let diff = Math.max(0, d.millis() - d.lastTimeMouseMoved - 3000);
           for (var i = 0; i < Math.round(diff / ORB_DISPLAY_TIME); i++) {
             if (i === MAX_ORBS)
               break;

@@ -98,6 +98,7 @@
                 <div class="lineTwo">
                     <h3 lng-tag="directionArtistique">Direction&nbspArtistique</h3>
                     <h3 lng-tag="illustration">Illustration</h3>
+                    <h3 lng-tag="graphicNovel">Roman Graphique</h3>
                 </div>
             </div>
 
@@ -207,14 +208,8 @@
                     <a href="mailto:a.brigaud25@gmail.com" target="_blank">Contact</a>
                 </h6>
             <div id="legende" id="legendeEN">
-                <h4 id="legendText">
-                    Curieux créatif, né à&nbspMontpellier (France) en&nbsp;1996, vivant aujourd'hui&nbspà&nbspParis.
-                    Étudie
-                    le design graphique et la direction artistique au Campus Fonderie &nbsp;de &nbsp;l'image. Chercheur
-                    de
-                    solutions et de systèmes graphiques. Enthousiasmé par le&nbsp;creative&nbsp;coding
-                    et&nbsple&nbspfutur.
-                    Amateur d'expériences et &nbsp;de&nbsp;travaux&nbsp;collaboratifs.
+                <h4 id="legendText" lng-tag="legendText">
+                    Graphic designer and artistic director, I believe in meaningful and creative designs. Graduated from a Master of Creative Direction in Graphic Design in Paris and formed between Montpellier, Grenoble and Bordeaux, I designed brand identities, websites, books, prints, posters and photographs for several companies and studios. I&apos;m a responsive, team oriented and creative designer, focused on building strong design systems and merging function and aesthetic in soulful projects.
                 </h4>
             </div>
         </div>
@@ -640,27 +635,42 @@
         {
             listeImages: [
                 {
-                    src: './Images/KarmaCoffee/KarmaCoffee1.jpg',
+                    src: './Images/AlaRecherche/AlaRecherche1.jpg',
                     alt: 'Logo Karma Coffee',
                 },
                 {
-                    src: './Images/KarmaCoffee/KarmaCoffee2.jpg',
+                    src: './Images/AlaRecherche/AlaRecherche2.jpg',
                     alt: 'Ensemble de supports imprimés pour Karma Coffee',
                 },
                 {
-                    src: './Images/KarmaCoffee/KarmaCoffee3.jpg',
+                    src: './Images/AlaRecherche/AlaRecherche3.jpg',
                     alt: 'Carte de visite et mug pour Karma Coffee',
                 },
                 {
-                    src: './Images/KarmaCoffee/KarmaCoffee4.jpg',
+                    src: './Images/AlaRecherche/AlaRecherche4.jpg',
                     alt: 'Photographie du vélo ambulant Karma Coffee',
                 },
                 {
-                    src: './Images/KarmaCoffee/KarmaCoffee5.jpg',
+                    src: './Images/AlaRecherche/AlaRecherche5.jpg',
                     alt: 'Photographie du café ambulant dans un parc bordelais',
                 },
                 {
-                    src: './Images/KarmaCoffee/KarmaCoffee6.jpg',
+                    src: './Images/AlaRecherche/AlaRecherche6.jpg',
+                    alt: 'Photographie du café ambulant dans un parc bordelais',
+                },
+                {
+                    src: './Images/AlaRecherche/AlaRecherche7.jpg',
+                    alt: 'Photographie du café ambulant dans un parc bordelais',
+                },
+                {
+                    src: './Images/AlaRecherche/AlaRecherche8.jpg',
+                    alt: 'Photographie du café ambulant dans un parc bordelais',
+                },                {
+                    src: './Images/AlaRecherche/AlaRecherche9.gif',
+                    alt: 'Photographie du café ambulant dans un parc bordelais',
+                },
+                {
+                    src: './Images/AlaRecherche/AlaRecherche10.gif',
                     alt: 'Photographie du café ambulant dans un parc bordelais',
                 },
             ],
@@ -827,12 +837,27 @@
         lgdDOM.innerHTML = bibliotheque[indexProject].legende;
 
 
+        const buttonEn = document.getElementById('enTranslator');
+        const buttonFr = document.getElementById('frTranslator');
 
-            //import Translate (WIP)
-        //     $.getScript("index.js", function() {
+        buttonFr.addEventListener('click', ()=>{
+            // console.log("j'ai cliqué le boutton fr");
+            lgdDOM.innerHTML = bibliotheque[indexProject].legendeFR;
+
+        })
+
+        buttonEn.addEventListener('click', ()=>{
+            // console.log("j'ai cliqué le boutton En");
+            lgdDOM.innerHTML = bibliotheque[indexProject].legende;
+
+        })
+
+
+        //     //import Translate (WIP)
+        //     $.getScript("/index.js", function() {
         //  alert("Script loaded but not necessarily executed.");
         //  console.log("i have the script");
-
+            
         //  if(lng == 'fr'){
         //     lgdDOM.innerHTML = bibliotheque[indexProject].legendeFR;
         // }
@@ -865,9 +890,13 @@
             document.getElementById('imgCentral').style.display = "none";
 
             //set elemetdom innerHTML
-            lgdDOM.innerHTML = 'Curieux créatif, né à&nbspMontpellier (France) en&nbsp;1996, vivant aujourd\'hui&nbspà&nbspParis. Étudie le design graphique et la direction artistique au Campus Fonderie &nbsp;de &nbsp;l\'image. Chercheur de solutions et de systèmes graphiques. Enthousiasmé par le&nbsp;creative&nbsp;coding et&nbsple&nbspfutur. Amateur d\'expériences et &nbsp;de&nbsp;travaux&nbsp;collaboratifs.';
+            lgdDOM.innerHTML = 'Graphic designer and artistic director, I believe in meaningful and creative designs. Graduated from a Master of Creative Direction in Graphic Design in Paris and formed between Montpellier, Grenoble and Bordeaux, I designed brand identities, websites, books, prints, posters and photographs for several companies and studios. I&apos;m a responsive, team oriented and creative designer, focused on building strong design systems and merging function and aesthetic in soulful projects.';
+            lgdDOM.setAttribute('lng-tag','legendText');
+            // lgdDOM.innerHTML = bibliotheque[indexProject].legende;
+
+            
             divContainerCopyright.style.alignItems = 'center';
-            divContainerCopyright.style.fontSize = '1vw';
+            divContainerCopyright.style.fontSize = '2em';
             divContainerCopyright.style.height = '100vh';
 
             
@@ -906,7 +935,7 @@
         imgCanvasGenerated.style.left = '';
         imgCanvasGenerated.style.top = '';
         imgCanvasGenerated.style.zIndex = '1';
-        imgCanvasGenerated.style.display = 'flex'
+        imgCanvasGenerated.style.display = 'none'
         divAurelien.appendChild(imgCanvasGenerated);
     }, 20000);
 
