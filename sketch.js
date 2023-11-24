@@ -68,7 +68,7 @@ function setup() {
 
       leading = 16; 
 
-      waveSize= 20;
+      waveSize= 90;
     }
 
 }
